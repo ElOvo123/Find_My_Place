@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>FAQ's</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="default">Make us a questions:</ion-label>
+    <ion-input [(ngModel)]="questionName" placeholder="Write to us"></ion-input>
+    <ion-button color="primary" (click)="addQuestion()">
+      <ion-icon name="add"></ion-icon>
+      </ion-button>
+  </ion-item>
+
+  
+  <div *ngFor="let item of questions" lines="none">
+    <ion-card>
+      <ion-card-header>
+        <ion-item>
+          <ion-icon name="person-circle" slot="start"></ion-icon>
+          <ion-label>{{item.label}}</ion-label>
+        </ion-item>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.description}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+</ion-content>

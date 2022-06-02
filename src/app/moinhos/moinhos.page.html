@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Moinhos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of news" lines="none">
+
+    <ion-card>
+      <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4>
+          <img src="{{item.image}}"/>
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+
+      <ion-card-header>
+        <ion-card-subtitle>{{item.subtitle}}</ion-card-subtitle>
+        <ion-card-title>{{item.title}}</ion-card-title>
+
+      </ion-card-header>
+      <ion-card-content>
+
+        {{item.description}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
